@@ -1,0 +1,45 @@
+/* Asegúrate de que el contenedor del carrusel esté centrado en la página */
+.custom-carousel-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    height: 55vh;           /* Ocupa toda la altura de la ventana */
+  }
+  
+  .custom-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 50%;              /* Ajusta el ancho del carrusel según tu diseño */
+  }
+  
+  .carousel-item {
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-image {
+    position: relative;
+    width: 100%;             /* Ocupa el ancho completo del carrusel */
+    overflow: hidden;
+  }
+  
+  .carousel-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  @media (max-width: 480px) {
+    .custom-carousel {
+        position: relative;
+        overflow: hidden;
+        width: 25rem;              /* Ajusta el ancho del carrusel según tu diseño */
+      }
+  }
+  
+  @media (min-width: 481px) and (max-width: 1024px) {
+    .custom-carousel {
+        position: relative;
+        overflow: hidden;
+        width: 40rem;              /* Ajusta el ancho del carrusel según tu diseño */
+      }
+  }

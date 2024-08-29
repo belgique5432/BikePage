@@ -1,0 +1,82 @@
+.publicity-container {
+    display: flex;
+    width: 100%;
+    background-color: grey; /* Fondo gris para el contenedor */
+    height: 45rem; /* Altura del contenedor */
+    align-items: center; /* Centra verticalmente el contenido en el contenedor */
+    justify-content: space-between; /* Distribuye espacio entre el texto y la imagen */
+    padding: 1rem; /* Opcional: agrega un poco de padding para evitar que el contenido toque los bordes */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas si es necesario */
+  }
+  
+  .publicity-text {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+    margin-right: 2rem; /* Espacio entre el texto y la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Alinea el contenido del texto a la izquierda */
+  }
+  
+  .publicity-text h1, .publicity-text h2 {
+    margin: 0;
+    color: white; /* Color del texto */
+  }
+  
+  .publicity-text h2:last-of-type {
+    color: white;
+    background-color: red;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    width: 10rem;
+    font-size: 1rem; /* Ajusta el tamaño de la fuente si es necesario */
+    align-self: center; /* Centra el elemento horizontalmente dentro del contenedor de texto */
+  }
+  
+  /* Ajustes para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .publicity-container {
+      flex-direction: column; /* Cambia la dirección del flex a columna en pantallas pequeñas */
+      height: auto; /* Permite que la altura se ajuste automáticamente */
+      text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+  
+    .publicity-text {
+      margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+      margin-bottom: 1rem; /* Agrega un margen inferior para separar el texto de la imagen */
+    }
+  
+    .publicity-text h2:last-of-type {
+      width: auto; /* Permite que el ancho del botón se ajuste automáticamente */
+      font-size: 0.9rem; /* Ajusta el tamaño de la fuente si es necesario */
+      margin: 0 auto; /* Centra el botón horizontalmente */
+    }
+  
+    .publicity-image {
+      width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor en pantallas pequeñas */
+    }
+  
+    .publicity-image img {
+      width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor en pantallas pequeñas */
+      height: auto; /* Permite que la altura de la imagen se ajuste proporcionalmente */
+      object-fit: contain; /* Ajusta la imagen para que se ajuste sin recortar */
+    }
+  }
+  
+  /* Ajustes para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .publicity-text h1 {
+      font-size: 1.5rem; /* Ajusta el tamaño de la fuente para h1 */
+    }
+  
+    .publicity-text h2 {
+      font-size: 0.9rem; /* Ajusta el tamaño de la fuente para h2 */
+    }
+  
+    .publicity-text h2:last-of-type {
+      width: auto; /* Permite que el ancho del botón se ajuste automáticamente */
+      padding: 0.8rem; /* Ajusta el padding del botón */
+    }
+  }
+  

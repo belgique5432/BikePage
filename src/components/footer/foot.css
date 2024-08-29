@@ -1,0 +1,29 @@
+.footer-container-new {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+.footer-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.footer-element h2 {
+    margin: 0 15px; /* Margen horizontal para separar los <h2> */
+    font-size: 16px; /* Ajusta el tamaño según sea necesario */
+}
+
+.footer-element h2 a {
+    color: white;
+    text-decoration: none; /* Opcional: Remover subrayado en los enlaces */
+}

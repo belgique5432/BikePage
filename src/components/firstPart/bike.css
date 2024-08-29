@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 45rem; /* Altura fija de 45rem */
+  overflow: hidden;
+}
+
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor manteniendo la relación de aspecto */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.text-overlay h1,
+.text-overlay h2,
+.text-overlay h3 {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.8); /* Fondo rojo con opacidad */
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 1s;
+}
+
+.fade-in.delay-3 {
+  animation-delay: 1.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+      height: 30rem; /* Reducir la altura en pantallas más pequeñas */
+  }
+
+  .text-overlay h1,
+  .text-overlay h2,
+  .text-overlay h3 {
+      font-size: 1.5rem; /* Ajustar el tamaño de fuente para pantallas pequeñas */
+      padding: 8px;
+  }
+}
